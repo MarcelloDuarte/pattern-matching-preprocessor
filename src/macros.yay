@@ -1,0 +1,18 @@
+<?php
+
+macro {
+   ·token(T_VARIABLE)·A match {
+        ·rtoken('/^[^(\=>)]/')·case
+        =>
+        ···result} 
+} >> {
+(function() use (·A) {
+$on = match(·A);
+$mdPatternMatchingReturnValue = null;
+switch (true) {
+    case $on(·case): $mdPatternMatchingReturnValue = ···result;
+    break;
+}
+return $mdPatternMatchingReturnValue;
+})();
+}
