@@ -21,7 +21,7 @@ A simpler `switch` statement
 
 ```php
 $y = $x match {
-    1 => "one"
+    1 => "one",
     2 => "two"
 }
 ```
@@ -31,8 +31,8 @@ Catch all using a `case _` syntax
 
 ```php
 $y = $x match {
-    1 => "one"
-    2 => "two"
+    1 => "one",
+    2 => "two",
     _ => "many"
 }
 ```
