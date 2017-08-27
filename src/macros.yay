@@ -2,17 +2,15 @@
 
 macro {
    ·token(T_VARIABLE)·A match {
-        ·rtoken('/^[^(\=>)]/')·case
-        =>
-        ···result} 
+        ·ls(·chain(·any()·case, ·token(T_DOUBLE_ARROW), ·any()·result), ·token(","))·cases
+    } 
 } >> {
-(function() use (·A) {
-$on = match(·A);
-$mdPatternMatchingReturnValue = null;
-switch (true) {
-    case $on(·case): $mdPatternMatchingReturnValue = ···result;
-    break;
-}
-return $mdPatternMatchingReturnValue;
-})();
+(function($declaredVars) use (·A) {
+    extract($declaredVars);
+    $on = match(·A); switch(true) {
+        ·cases ··· {
+            case $on(·case): ·result; break;
+        }
+    }
+})(get_defined_vars())
 }

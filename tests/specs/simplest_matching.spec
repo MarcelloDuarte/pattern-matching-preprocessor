@@ -10,14 +10,10 @@ $x match {
 
 --EXPECT--
 
-(function () use ($x) {
-    $on·cfcd208495d565ef66e7dff9f98764da = match($x);
-    $mdPatternMatchingReturnValue·cfcd208495d565ef66e7dff9f98764da = null;
-    switch (true) {
-    case $on·cfcd208495d565ef66e7dff9f98764da(42): $mdPatternMatchingReturnValue·cfcd208495d565ef66e7dff9f98764da = "bazinga"
-;
-    break;
-}
-    return $mdPatternMatchingReturnValue·cfcd208495d565ef66e7dff9f98764da;
-})();
+(function($declaredVars·cfcd208495d565ef66e7dff9f98764da) use ($x) {
+    extract($declaredVars·cfcd208495d565ef66e7dff9f98764da);
+    $on·cfcd208495d565ef66e7dff9f98764da = match($x); switch(true) {
+        case $on·cfcd208495d565ef66e7dff9f98764da(42): "bazinga"; break;
 
+    }
+})(get_defined_vars())
