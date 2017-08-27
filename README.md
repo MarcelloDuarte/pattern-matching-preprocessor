@@ -9,7 +9,7 @@ TODO
 ----
 
  - [x] Simplest pattern matching syntax example
- - [ ] Catch all using a `case _` syntax
+ - [x] Catch all using a `case _` syntax
  - [ ] Case classes support
  - [ ] Guards support
  - [ ] Check for exhausting clauses error (sealed number of cases)

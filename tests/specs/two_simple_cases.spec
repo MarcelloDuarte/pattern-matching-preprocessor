@@ -1,6 +1,6 @@
 --DESCRIPTION--
 
-Test simplest matching
+Test simple case with multiple cases
 
 --GIVEN--
 
